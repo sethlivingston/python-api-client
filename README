@@ -1,0 +1,12 @@
+# API Endpoints
+
+Wraps Python Requests with an (even) easier to use programming model for
+accessing a REST API.
+
+    from apiendpoints import API, APIEndpoint
+
+    api = API('https://webhook.site/')
+    endpoint = APIEndpoint(api, '/75b8e281-bb6d-4611-8cca-860d9d083545')
+
+    response: dict = endpoint.fetch()
+
