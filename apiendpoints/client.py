@@ -83,8 +83,8 @@ class APIEndpoint(object):
         results = None
 
         with self.api.create_session() as session:
-            res = self._send(session, merged_headers, merged_json,
-                             merged_params)
+            res = self._send(session, headers=merged_headers,
+                             json=merged_json, params=merged_params)
             if res.content:
                 json = res.json()
                 results = self.results_getter(json)
